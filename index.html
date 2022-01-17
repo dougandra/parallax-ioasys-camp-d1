@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="media-querie.css">
+    <title>Night Parallax</title>
+</head>
+<body>
+
+    <header>
+
+     <div class="logo"><a href="https://camp.ioasys.com.br/"><img id="i" src="./Assets/logo.png"></a></div>
+     <ul>
+         <li><a href="#" class="active">Home</a></li>
+         <li><a href="https://github.com/dougandra">About</a></li>
+         <li><a href="https://www.freepik.com">Source</a></li>
+         <li><a href="https://www.freepik.com/free-vector/mountains-cleft-view-from-bottom-night-scenery-landscape-with-high-rocks-full-moon-with-stars-glowing-peaks_13194970.htm#page=1&query=Scene&position=38">Attribution</a></li>
+         <li><a href="https://www.linkedin.com/in/douglasandradez/">Contact</a></li>
+
+     </ul>
+
+
+    </header>
+
+
+    <section>
+    <img src="./Assets/stars.png" id="stars">
+    <img src="./Assets/mountains_behind.png" id="mountains_behind">
+    <h2 id="text">IOASYS</h2>
+    <a href="#sec" id="btn">Explore</a>
+    <img src="./Assets/mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+
+    <h2>Inovação</h2>
+    <br>
+    <p>
+    
+        Sempre em busca de novos talentos, a empresa Ioasys, líder brasileira em inovação,
+        busca em todo território nacional pessoas que desejem impactar a sociedade através da tecnologia.
+        Com alvo na construção de soluções inovadoras, o Camp Ioasys abre um leque exponencial de oportunidades
+        na indústria tech, movimentando a sociedade, trazendo evolução e impacto social.
+        <br><br>
+        No Camp, os alunos encontram uma metodologia de ensino com uma plataforma pedagógica 
+        e um ambiente de estudos inclusivo, além de materiais adequados às necessidades de todos os
+        participantes. Com isso, é promovido a acessibilidade durante todo o processo de aprendizagem.
+        É desenvolvida práticas pedagógicas alinhadas às diretrizes próprias de diversidade e ao fator humano
+        das relações que já fazem parte do dia a dia Ioasys. A busca é aprender juntos e construir 
+        soluções que favoreçam os diálogos entre todas as comunidades e nos aproximem das questões fortes da 
+        nossa sociedade.
+        
+
+    </p>
+    <br><br><br><br>
+    <h2>Desafios Reais</h2>
+    <br>
+    <p>
+    
+        O programa de formação é construído de forma dinâmina e mão na massa,  ocorrendo talks, desafios práticos, 
+        mentorias e conteúdos imersivos. Você é o protagonista no Camp, no qual toda sua dedicação poderá se converter
+        em prêmios e quem sabe trabalhar na empresa. Com mira na formação profissional, todo escopo do Camp é focado nas
+        principais tecnologias buscadas pelo mercado. A preparação é certeira e vai seguindo tendências de aplicações
+        inovadoras e criativas.
+        <br><br>
+        No Camp, os alunos encontram uma metodologia de ensino com uma plataforma pedagógica 
+        e um ambiente de estudos inclusivo, além de materiais adequados às necessidades de todos os
+        participantes. Com isso, é promovido a acessibilidade durante todo o processo de aprendizagem e desenvolvida 
+        práticas pedagógicas alinhadas às diretrizes próprias de diversidade e ao fator humano
+        das relações que já fazem parte do dia a dia Ioasys. A busca é de aprender juntos e construir 
+        soluções que favoreçam os diálogos entre todas as comunidades e nos aproximem das questões que mais geram 
+        transformação na nossa sociedade.
+        
+
+    </p>
+
+</p>
+<br><br><br><br>
+<h2>Trilhas de Aprendizado</h2>
+<br>
+<p>
+
+    Na Ioasys, é todo conhecimento desenvolvido é criado ao longo do Camp e aprimorado de acordo com as
+    principais tecnologias da empresa. Em todo programa, você irá desenvolver todas as competências necessárias
+    alinhadas ao mercado para sair na frente e transformar a sociedade. As avaliações, durante toda a jornada, serão 
+    realizadas a partir de critérios técnicos e práticos com profissionais atuantes no mercado. Os destaques da edição
+    poderão receber premiações, além de ter a oportunidade de fazer parte do time ioasys.
+    <br><br>
+    
+
+</p>
+
+    </div>
+
+    <footer>
+        
+        <a class="i" href="https://github.com/dougandra"> Created by Douglas Andrade  ·  Ioasys challenge Camp 2022</a>
+    
+    </footer>
+
+    <script>
+
+    let stars = document.getElementById('stars');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let mountains_front = document.getElementById('mountains_front');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', function(){
+
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4.2 + 'px';
+        btn.style.marginTop = value * 4 + 'px';
+        header.style.Top = value * 0.5 + 'px';
+
+    })
+   
+    </script>
+    
+</body>
+</html>
